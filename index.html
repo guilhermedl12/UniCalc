@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Calculadora de Notas | UNI-RN</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="topo">
+
+    <div class="logo-area">
+
+      <img src="assets/logo_uni.png" alt="Logo faculdade" class="logo">
+
+      <div>
+        <h1>Calculadora de Notas</h1>
+        <p>
+          Calcule sua média e saiba
+          quanto precisa para passar.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="theme-switch">
+
+      <span id="themeIcon">
+        🌙
+      </span>
+
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+
+        <span class="slider"></span>
+      </label>
+
+    </div>
+
+  </header>
+
+  <main class="container">
+
+    <div class="grid">
+
+      <!-- ENTRADA -->
+
+      <section class="card">
+
+        <h2>📘 Inserir Notas</h2>
+
+        <label>
+          Unidade 1 (peso 4)
+        </label>
+
+        <input type="number" id="u1" min="0" max="10" step="0.1" placeholder="Ex: 7.5">
+
+        <label>
+          Unidade 2 (peso 6)
+        </label>
+
+        <input type="number" id="u2" min="0" max="10" step="0.1" placeholder="Ex: 8.0">
+
+        <button onclick="calcular()">
+          Calcular resultado
+        </button>
+
+        <button class="secondary" onclick="limparCampos()">
+          Limpar campos
+        </button>
+
+      </section>
+
+      <!-- RESULTADO -->
+
+      <section class="card resultado-card">
+
+        <h2>📊 Resultados</h2>
+
+        <div id="resultado">
+
+          <div class="placeholder">
+            Preencha a Unidade 1
+            para iniciar.
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+    <section class="info-box">
+
+      <div class="info-content">
+
+        <h2>
+          📘 Como o cálculo funciona
+        </h2>
+
+        <p>
+          No semestre, a nota é composta
+          por duas unidades:
+        </p>
+
+        <ul>
+
+          <li>
+            <strong>Unidade 1:</strong>
+            possui peso <strong>4</strong>
+          </li>
+
+          <li>
+            <strong>Unidade 2:</strong>
+            possui peso <strong>6</strong>
+          </li>
+
+        </ul>
+
+        <p>
+          A média parcial é calculada
+          multiplicando cada unidade pelo
+          seu peso e dividindo a soma por 10.
+        </p>
+
+        <p>
+          Para aprovação direta, é necessário
+          alcançar média
+          <strong>igual ou superior a 7,0</strong>.
+        </p>
+
+        <p>
+          Caso a média parcial fique abaixo de 7,
+          o aluno ficará em recuperação.
+        </p>
+
+        <p>
+          A nota necessária na recuperação
+          é calculada pela fórmula:
+        </p>
+
+        <div class="formula-box">
+          12 − média parcial
+        </div>
+
+        <p>
+          O sistema também informa quanto você
+          precisa tirar na Unidade 2 para passar
+          direto, baseado na nota inserida
+          da Unidade 1.
+        </p>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
