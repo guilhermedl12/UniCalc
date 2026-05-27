@@ -76,15 +76,15 @@ body{
 }
 
 .logo{
-  width:85px;
-  height:85px;
+  width: 90px;
+  height: 90px;
   object-fit:contain;
 
   background:
   rgba(255,255,255,.08);
 
   border-radius:20px;
-  padding:8px;
+  padding:7px;
 }
 
 .logo-area h1{
